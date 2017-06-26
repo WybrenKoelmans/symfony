@@ -75,6 +75,14 @@ class Parser
         return $data;
     }
 
+    /**
+     * @return int
+     */
+    public function getLastLineNumberBeforeDeprecation()
+    {
+        return $this->getRealCurrentLineNb();
+    }
+
     private function doParse($value, $flags)
     {
         $this->currentLineNb = -1;
